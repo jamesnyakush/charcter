@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="app_name">Movies</string>-->
+    <!--    <string name="default_web_client_id" />-->
+    <!--    <string name="error_message_email" />-->
+    <!--    <string name="error_valid_email_password">error_valid_email_password</string>-->
+    <!--    <string name="success_message">success_message</string>-->
+    <!--    <string name="error_email_exists">error_email_exists</string>-->
+    <!--    <string name="error_password_match">error_password_match</string>-->
+</resources>

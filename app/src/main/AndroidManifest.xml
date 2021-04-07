@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.e_movieapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".MovieApp"
+        android:allowBackup="true"
+        android:icon="@drawable/movies"
+        android:label="MovieApp"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="android:label">
+        <activity android:name=".ui.movie.activity.Movie"></activity>
+        <activity android:name=".ui.auth.activity.Auth">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.SplashActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.ForgotPassword" />
+        <activity android:name=".activities.Favorite" />
+        <activity android:name=".activities.RatingActivity" />
+        <activity android:name=".activities.DisplayActivity" />
+        <activity android:name=".activities.Moviesearch" />
+        <activity android:name=".activities.RegisterMovie" /> <!-- <activity android:name=".Activities.login" /> -->
+        <activity android:name=".activities.IntroActivity" /> <!-- <activity android:name=".Activities.Registration" /> -->
+        <activity android:name=".activities.MainActivity">
+
+            <!--
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+    </application>
+
+</manifest>

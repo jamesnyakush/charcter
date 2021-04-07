@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_movie"
+    app:startDestination="@id/movie">
+
+    <fragment
+        android:id="@+id/movie"
+        android:name="com.example.e_movieapp.ui.movie.fragment.Movie"
+        android:label="movie_fragment"
+        tools:layout="@layout/movie_fragment" >
+        <action
+            android:id="@+id/action_movie_to_registerMovie"
+            app:destination="@id/registerMovie" />
+        <action
+            android:id="@+id/action_movie_to_favourites"
+            app:destination="@id/favourites" />
+        <action
+            android:id="@+id/action_movie_to_rating"
+            app:destination="@id/rating" />
+        <action
+            android:id="@+id/action_movie_to_editMovies"
+            app:destination="@id/editMovies" />
+        <action
+            android:id="@+id/action_movie_to_displayMovies"
+            app:destination="@id/displayMovies" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayMovies"
+        android:name="com.example.e_movieapp.ui.movie.fragment.DisplayMovies"
+        android:label="display_movies_fragment"
+        tools:layout="@layout/display_movies_fragment" />
+    <fragment
+        android:id="@+id/editMovies"
+        android:name="com.example.e_movieapp.ui.movie.fragment.EditMovies"
+        android:label="edit_movies_fragment"
+        tools:layout="@layout/edit_movies_fragment" />
+    <fragment
+        android:id="@+id/favourites"
+        android:name="com.example.e_movieapp.ui.movie.fragment.Favourites"
+        android:label="favourites_fragment"
+        tools:layout="@layout/favourites_fragment" />
+    <fragment
+        android:id="@+id/rating"
+        android:name="com.example.e_movieapp.ui.movie.fragment.Rating"
+        android:label="rating_fragment"
+        tools:layout="@layout/rating_fragment" />
+    <fragment
+        android:id="@+id/registerMovie"
+        android:name="com.example.e_movieapp.ui.movie.fragment.RegisterMovie"
+        android:label="register_movie_fragment"
+        tools:layout="@layout/register_movie_fragment" />
+</navigation>
