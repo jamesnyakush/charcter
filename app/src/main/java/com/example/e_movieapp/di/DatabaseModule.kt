@@ -25,7 +25,7 @@ object DatabaseModule {
     @Provides
     @Singleton
     fun providesCourseDao(appDatabase: AppDatabase): MovieDao =
-        appDatabase.MovieDao()
+        appDatabase.moviesdao()
 
 
 }

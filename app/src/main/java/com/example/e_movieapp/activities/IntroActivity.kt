@@ -11,7 +11,7 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
-        val btnRegisterMovie = findViewById<Button>(R.id.btnRegisterMovie)
+/*        val btnRegisterMovie = findViewById<Button>(R.id.btnRegisterMovie)
         btnRegisterMovie.setOnClickListener {
             startActivity(Intent(this@IntroActivity, RegisterMovie::class.java))
         }
@@ -20,7 +20,7 @@ class IntroActivity : AppCompatActivity() {
         btnDisplayMovies.setOnClickListener {
             startActivity(Intent(this@IntroActivity, DisplayActivity::class.java))
 
-        }
+        }*/
 
     }
 }

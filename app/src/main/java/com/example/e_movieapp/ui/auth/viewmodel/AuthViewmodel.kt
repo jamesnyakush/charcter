@@ -3,7 +3,7 @@ package com.example.e_movieapp.ui.auth.viewmodel
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.e_movieapp.data.models.UserData
+import com.example.e_movieapp.data.db.models.UserData
 import com.example.e_movieapp.data.repository.AuthRepository
 import com.example.e_movieapp.utils.EmptyResource
 import com.example.e_movieapp.utils.logError

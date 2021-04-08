@@ -1,5 +1,6 @@
-package com.example.e_movieapp.data
+package com.example.e_movieapp.data.retrofit
 
+import com.example.e_movieapp.data.db.UserMovie
 import com.google.gson.annotations.SerializedName
 
 data class UserMovieResponse(

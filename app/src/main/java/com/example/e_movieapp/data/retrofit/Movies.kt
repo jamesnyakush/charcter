@@ -1,4 +1,4 @@
-package com.example.e_movieapp.data
+package com.example.e_movieapp.data.retrofit
 
 import com.google.gson.annotations.SerializedName
 

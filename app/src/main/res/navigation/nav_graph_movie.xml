@@ -50,5 +50,9 @@
         android:id="@+id/registerMovie"
         android:name="com.example.e_movieapp.ui.movie.fragment.RegisterMovie"
         android:label="register_movie_fragment"
-        tools:layout="@layout/register_movie_fragment" />
+        tools:layout="@layout/register_movie_fragment" >
+        <action
+            android:id="@+id/action_registerMovie_to_displayMovies"
+            app:destination="@id/displayMovies" />
+    </fragment>
 </navigation>

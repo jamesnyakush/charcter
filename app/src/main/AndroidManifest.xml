@@ -23,15 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.SplashActivity" />
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.ForgotPassword" />
-        <activity android:name=".activities.Favorite" />
-        <activity android:name=".activities.RatingActivity" />
-        <activity android:name=".activities.DisplayActivity" />
-        <activity android:name=".activities.Moviesearch" />
-        <activity android:name=".activities.RegisterMovie" /> <!-- <activity android:name=".Activities.login" /> -->
-        <activity android:name=".activities.IntroActivity" /> <!-- <activity android:name=".Activities.Registration" /> -->
+        <activity android:name=".activities.IntroActivity" />
         <activity android:name=".activities.MainActivity">
 
             <!--

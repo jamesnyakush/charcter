@@ -25,8 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         welcomeTextView.setOnClickListener {
 
+/*
             val myIntent = Intent(this, LoginActivity::class.java)
             startActivity(myIntent)
+*/
 
             welcomeTextView.movementMethod = LinkMovementMethod.getInstance();
 

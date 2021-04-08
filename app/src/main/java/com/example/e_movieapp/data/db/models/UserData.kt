@@ -1,4 +1,4 @@
-package com.example.e_movieapp.data.models
+package com.example.e_movieapp.data.db.models
 
 object UserData {
     var name: String = ""
