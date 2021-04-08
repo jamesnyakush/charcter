@@ -42,9 +42,9 @@
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/addFavourites"
+            android:id="@+id/edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Favourites"/>
+            android:text="Edit"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

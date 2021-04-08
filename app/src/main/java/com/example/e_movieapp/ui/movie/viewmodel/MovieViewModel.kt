@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.e_movieapp.data.repository.MovieRepository
-import com.example.e_movieapp.data.db.UserMovie
+import com.example.e_movieapp.data.db.models.UserMovie
 import kotlinx.coroutines.launch
 
 
@@ -14,9 +14,14 @@ class MovieViewModel @ViewModelInject constructor(
     private val repository: MovieRepository
 ) : ViewModel() {
 
-    private val _fetchmovies = MutableLiveData<List<UserMovie>>()
-    val fetchmovies: LiveData<List<UserMovie>>
-        get() = _fetchmovies
+    private val _fetchMovies = MutableLiveData<List<UserMovie>>()
+    val fetchMovies: LiveData<List<UserMovie>>
+        get() = _fetchMovies
+
+//    private val _fetchFavourites = MutableLiveData<List<Favourite>>()
+//    val fetchFavourites: LiveData<List<Favourite>>
+//        get() = _fetchFavourites
+
 
     fun addMovie(
         title: String,
@@ -39,6 +44,18 @@ class MovieViewModel @ViewModelInject constructor(
     }
 
     fun fetchMovies() = viewModelScope.launch {
-        _fetchmovies.value = repository.fetchMovies()
+        _fetchMovies.value = repository.fetchMovies()
     }
+
+
+    fun addFavourites(
+        userMovie: UserMovie
+    ) = viewModelScope.launch {
+        repository.addFavourites(userMovie)
+    }
+
+
+/*    fun fetchFavourites() = viewModelScope.launch {
+        _fetchFavourites.value = repository.fetchFavourites()
+    }*/
 }

@@ -2,18 +2,21 @@ package com.example.e_movieapp.ui.movie.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_movieapp.data.db.models.UserMovie
+import com.example.e_movieapp.databinding.ItemEditMovieBinding
 import com.example.e_movieapp.databinding.ItemMovieBinding
+import com.example.e_movieapp.ui.movie.fragment.EditMoviesDirections
 
 
-class MovieAdapter(
+class EditMovieAdapter(
     var movies: List<UserMovie>,
     var movieItemClickListener: MovieItemClickListener
-) : RecyclerView.Adapter<MovieAdapter.MoviesViewHolder>() {
+) : RecyclerView.Adapter<EditMovieAdapter.MoviesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MoviesViewHolder(
-        ItemMovieBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        ItemEditMovieBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
 
     override fun getItemCount() = movies.size
@@ -29,11 +32,15 @@ class MovieAdapter(
         rate.text = movie.rate
         review.text = movie.review
 
-        addFavourites.setOnClickListener {
-            movieItemClickListener.onItemClick(movie)
+        edit.setOnClickListener {
+
+            val action = EditMoviesDirections.actionEditMoviesToOnEdit()
+//            action.actionId.g = movies[position]
+            Navigation.findNavController(it).navigate(action)
         }
 
     }
 
-    class MoviesViewHolder(val binding: ItemMovieBinding) : RecyclerView.ViewHolder(binding.root)
+    class MoviesViewHolder(val binding: ItemEditMovieBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }
